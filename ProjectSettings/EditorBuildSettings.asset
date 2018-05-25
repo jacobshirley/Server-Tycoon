@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 6f76fb7ccbc81504b9346ead8a7dfbff
+  - enabled: 1
+    path: Assets/Scenes/game.unity
+    guid: fe215c6509265b7448293f4bfc45888b
+  - enabled: 1
+    path: Assets/Scenes/game.unity
+    guid: fe215c6509265b7448293f4bfc45888b
+  - enabled: 1
+    path: Assets/Scenes/game.unity
+    guid: fe215c6509265b7448293f4bfc45888b
+  - enabled: 1
+    path: Assets/Scenes/SpaceInvaders.unity
+    guid: f09f78783d3010846b4b612f1d162060
+  - enabled: 1
+    path: Assets/Scenes/EmailClient.unity
+    guid: 4e7c63ab267201542b49d2a682852dd6
+  - enabled: 1
+    path: Assets/Scenarios/LogicGates/Logic Gate Scenario.unity
+    guid: b4cd2b021f2fe478c8cf60c15791b76f
+  - enabled: 1
+    path: Assets/Scenes/BOOMTOWN.unity
+    guid: 031fdbb192ff44f0695f5758a453619c
+  - enabled: 1
+    path: Assets/Scenarios/Maze/maze.unity
+    guid: 129dd593eb649436ea723fba05ff1b92
+  - enabled: 1
+    path: Assets/Scenes/GameManager.unity
+    guid: d7fd8094863864752a8a50ec7a528027
+  - enabled: 1
+    path: Assets/ServerSetup/Server Setup.unity
+    guid: eac580ed9ece545b2ab785d8d9b3b059
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 68c87ffaff91d48c997a689897a39d9c
+  - enabled: 1
+    path: Assets/Scenes/ClientSelect.unity
+    guid: 8d31cda79572346668e7b384d97ce096
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: 556a74408ccce49939ac6bc731dc1ddd
+  - enabled: 1
+    path: Assets/Scenarios/ProgramPuzzle/Programming Scene.unity
+    guid: 26ae4aeb1a41ee4458d86ab230ac8a5f
+  - enabled: 1
+    path: Assets/Scenarios/LogicDrop/Binary game.unity
+    guid: 8ff874a5789394ae08d3271f200e706b
+  - enabled: 1
+    path: Assets/Scenes/ComputerMenu.unity
+    guid: 7c3e25046f9274085a7565351f487f48
+  - enabled: 1
+    path: Assets/base.unity
+    guid: 823b6dbf077084a90a92da6ddfec1778
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 03d71b6ded9cb564f9737cd3ef3e46fe
+  - enabled: 1
+    path: Assets/Scenes/Passed.unity
+    guid: f316decc7dbfe4b4d8410c4f94e9c017
+  - enabled: 1
+    path: Assets/Scenes/FishTank.unity
+    guid: 626acdcaa90f2954288666e82f7e060b
+  - enabled: 1
+    path: Assets/Scenes/BrickBreaker.unity
+    guid: ea622deb47157b14aaa5cd17aabcf3f2
+  - enabled: 1
+    path: Assets/Scenes/Snake.unity
+    guid: c912a1f610174ab4ca0093972791f77a
+  - enabled: 1
+    path: Assets/Scenes/tutorial.unity
+    guid: f63055e8be8e3401c9177e684a11e59d
+  - enabled: 1
+    path: Assets/Scenes/BookCase.unity
+    guid: efb280a18d512724780706969b0e75fa
+  - enabled: 1
+    path: Assets/Scenes/ClientLeft.unity
+    guid: 6dbd0725e8bc68a4b80e72863c0f6c30
+  m_configObjects: {}

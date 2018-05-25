@@ -1,0 +1,6 @@
+{
+    "snippets": [{
+        "name": "hackers-are-attacking",
+        "code": "<color=#c792ea>if</color> <color=#82aaff>hackersAreAttacking</color><color=#89ddf3>()</color>\n\t<color=#82aaff>stopThem</color><color=#89ddf3>()</color>"
+    }]
+}

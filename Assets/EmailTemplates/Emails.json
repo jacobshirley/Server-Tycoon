@@ -1,0 +1,28 @@
+{
+    "templates": [
+      {
+        "sender": "Company A",
+        "subject": "Firewall Blocking Access To Files",
+        "body": "Some of our data has been lost behind your firewall, please can you send it to us directly.\n\nP.S. Don't forget to encrypt it using our private key, you'll need to find it before trying to get the data out to us!",
+        "scenario": "maze"
+      },
+      {
+        "sender": "Company B",
+        "subject": "Binary Issues",
+        "body": "We're having a couple of issues with one of our clients. He is messaging us some numbers and we need to find out what on earth he's trying to tell us.\n\nSmall issue, the numbers are in binary, and none of us can read it... Pls can you help? :)",
+        "scenario": "bin"
+      },
+      {
+        "sender": "Company C",
+        "subject": "Python Programming",
+        "body": "Our program isn't finding the errors in this code. We need you to help us, it's very important to us!\n\n You're our only hope and we need it quickly, so you'll have a time limit!",
+        "scenario": "code"
+      },
+      {
+        "sender": "Company D",
+        "subject": "Logic time",
+        "body": "Our circuitary has failed on us. We don't have any professionals, and you're the closest we have to an IT professional. Please can you fix our systems for us.",
+        "scenario": "logic"
+      }
+    ]
+}

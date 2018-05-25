@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main Menu.unity
+    guid: 6f76fb7ccbc81504b9346ead8a7dfbff
+  - enabled: 1
+    path: Assets/game.unity
+    guid: fe215c6509265b7448293f4bfc45888b
+  - enabled: 1
+    path: Assets/Scenes/EmailClient.unity
+    guid: 4e7c63ab267201542b49d2a682852dd6
+  - enabled: 1
+    path: Assets/Scenarios/LogicGates/Logic Gate Scenario.unity
+    guid: b4cd2b021f2fe478c8cf60c15791b76f
+  - enabled: 1
+    path: Assets/Scenarios/Maze/maze.unity
+    guid: 129dd593eb649436ea723fba05ff1b92
+  - enabled: 1
+    path: Assets/ServerSetup/Configure.unity
+    guid: a17c869d2115f41e8836137f95c03b62
+  - enabled: 1
+    path: Assets/ServerSetup/Server Setup.unity
+    guid: eac580ed9ece545b2ab785d8d9b3b059
+  - enabled: 1
+    path: Assets/Scenes/ClientSelect.unity
+    guid: 8d31cda79572346668e7b384d97ce096
+  m_configObjects: {}

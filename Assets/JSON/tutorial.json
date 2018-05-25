@@ -1,0 +1,18 @@
+{
+  "Parts": [{
+        "ID": 0,
+        "Path": "Server Placement UI>servermenu",
+        "Trigger": "Active",
+        "Text": "Hey Buddy, you look rough...",
+        "NextID": 1,
+        "Seen": false,
+        "Children": [{
+            "ID": 1,
+            "Path": "List>Viewport>Content>Server Item",
+            "Trigger": "Active",
+            "Text": "Hey Buddy, you look rough...",
+            "NextID": 1,
+            "Seen": false,
+        }]
+    }]
+}

@@ -1,0 +1,17 @@
+{
+    "ID": 0,
+    "Path": "Server Placement UI>servermenu",
+    "Trigger": "Active",
+    "Text": "This is the server menu. Displayed here are all the different servers you can buy. Servers get steadily more powerful the further down the list you go.",
+    "NextID": -1,
+    "Seen": false,
+    "Children": [{
+        "ID": 1,
+        "Path": "List>Viewport>Content>Server Item(Clone)",
+        "Trigger": "Active",
+        "Text": "Each server has 3 main properties: their CPU, RAM, and Storage.",
+        "NextID": -1,
+        "Seen": false,
+        "Children": []
+    }]
+}

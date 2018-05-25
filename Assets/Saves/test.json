@@ -1,0 +1,46 @@
+{
+  "Parts": [
+    {
+        "Text": "Hey Buddy, you look rough...",
+        "ObjectName": "",
+        "ID": 0,
+        "NextID": 1
+    },
+    {
+        "Text": "Look you need to get up.\n\n I dont want to say this but your life is a mess..",
+        "ObjectName": "",
+        "ID": 1,
+        "NextID": 2
+    },
+    {
+        "Text": "Don't look at me like that\n\n Do you even recognise me??\n\n Pan?! Your best friend?!?!",
+        "ObjectName": "",
+        "ID": 1,
+        "NextID": 2
+    },
+    {
+        "Text": "I know stuff is hard right now but if you just hear me out I can help you\n",
+        "ObjectName": "",
+        "ID": 2,
+        "NextID": 3
+    },
+    {
+        "Text": "I've got this new idea, and I want you to run it.\n Obviously I'll give you some money to start it, and I'll try to help you out where I can\n\n But realistically, it's all up to you.",
+        "ObjectName": "",
+        "ID": 3,
+        "NextID": 4
+    },
+    {
+        "Text": "Companies are starting to store data in big servers, but they have no idea what they're doing.\n\n That's where you come in.",
+        "ObjectName": "",
+        "ID": 4,
+        "NextID": 5
+    },
+    {
+        "Text": "What if we could hold their data for them? Hosting their data over the internet.\n\n I know it sounds crazy, but with your expertise and my money, I think we could make it work..",
+        "ObjectName": "",
+        "ID": 5,
+        "NextID": 6
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  
+  "servers": [
+    {
+      "id": 0,
+      "cost": 790,
+      "signature": "RX210 Neon Destroyer",
+      "cpu": 2.10,
+      "ram": 4,
+      "capacity": 500,
+      "powerUsage": 290
+    },
+    {
+      "id": 1,
+      "cost": 810,
+      "signature": "RX331 Outel EApotato",
+      "cpu": 3,
+      "ram": 4,
+      "capacity": 500,
+      "powerUsage": 290
+    },
+    {
+      "id": 2,
+      "cost": 950,
+      "signature": "RX332 MarioPlatform",
+      "cpu": 3,
+      "ram": 8,
+      "capacity": 2048,
+      "powerUsage": 450
+    },
+    {
+      "id": 3,
+      "cost": 1300,
+      "signature": "RX1520 PIXELds",
+      "cpu": 3.5,
+      "ram": 16,
+      "capacity": 2048,
+      "powerUsage": 550
+    },
+    {
+      "id": 4,
+      "cost": 1450,
+      "signature": "RX1540 BeardForger9000",
+      "cpu": 4.5,
+      "ram": 16,
+      "capacity": 1024,
+      "powerUsage": 600
+    },
+    {
+      "id": 5,
+      "cost": 1700,
+      "signature": "RX1560 SaintsIII",
+      "cpu": 4,
+      "ram": 16,
+      "capacity": 2048,
+      "powerUsage": 650
+    },
+    {
+      "id": 6,
+      "cost": 2000,
+      "signature": "RX2000 Mike Smith",
+      "cpu": 4.8,
+      "ram": 32,
+      "capacity": 3072,
+      "powerUsage": 750
+    },
+    {
+      "id": 7,
+      "cost": 2500,
+      "signature": "RX2320 TheLegend27",
+      "cpu": 5.6,
+      "ram": 32,
+      "capacity": 4096,
+      "powerUsage": 900
+    },
+    {
+      "id": 8,
+      "cost": 3000,
+      "signature": "RX3000 Detotated Wam",
+      "cpu": 6.3,
+      "ram": 32,
+      "capacity": 4096,
+      "powerUsage": 1000
+    }
+  ]
+}

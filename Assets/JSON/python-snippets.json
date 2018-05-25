@@ -1,0 +1,12 @@
+{
+    "snippets": [
+        {
+            "story": "Some hackers are trying to break into your servers! To prevent this you must fix this code in order to protect your clients\u2019 data.", 
+            "code": "<color=#a892ea><b>if</b></color> <color=#bbde87>hackersAreAttacking</color>()\n\t<color=#bbde87>stopThem</color>()\n"
+        }, 
+        {
+            "story": "A client is having problems with this code - it just won't seem to compile. Can you fix it?", 
+            "code": "<color=#a892ea><b>while</b></color> (<color=#bbde87>true</color>)\n\t<color=#bbde87>print</color> <color=#eaeaea>\"Hello, World!\"</color>\n"
+        }
+    ]
+}
