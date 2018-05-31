@@ -17,6 +17,8 @@ public class NewServerPlacement : MonoBehaviour {
     {
         hoverUI = (GameObject)Instantiate(hoverServerPrefab);
         SetHoverPos();
+        if (GameData.ui == null)
+            GameData.ui = GameObject.Find("Server Placement UI");
     }
 
     public void OnMouseOver()
@@ -59,6 +61,7 @@ public class NewServerPlacement : MonoBehaviour {
     public void SetActive(bool state)
     {
         hoverUI.SetActive(state);
+        GameData.ui.SetActive(!state);
     }
 
     void SetHoverPos()

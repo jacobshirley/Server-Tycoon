@@ -73,8 +73,6 @@ public class Tutorial : MonoBehaviour, System.IComparable
         List<Tutorial> children = new List<Tutorial>();
         List<string> Contains = new List<string>();
 
-        Debug.Log(this.Text);
-
         foreach (Tutorial tut in GetComponentsInChildren<Tutorial>())
         {
             if (tut != this && !Contains.Contains(tut.Text))
@@ -100,7 +98,6 @@ public class Tutorial : MonoBehaviour, System.IComparable
     {
         if (!Immediate)
         {
-            Debug.Log("TRYING TO CANCEL: " + this.gameObject.name);
             //if (GameObject.Find("Tutorial") != null)
               //  GameObject.Find("Tutorial").GetComponent<TutorialController>().CancelTutorial(this);
         }

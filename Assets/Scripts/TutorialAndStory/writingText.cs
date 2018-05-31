@@ -22,7 +22,7 @@ public class writingText : MonoBehaviour {
 	void Start () {
 		location = 0;
 		text.text = "";
-		message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
+		//message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
 		write = false;
 		if(cont != null){cont.enabled = false;}
 		Invoke("RunMe", 2);
@@ -61,7 +61,7 @@ public class writingText : MonoBehaviour {
 		location = 0;
 		text.text = "";
 		Debug.Log(ArrayPoint);
-		message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
+		//message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
 		write = false;
 		if(cont != null){cont.enabled = false;}
 		Invoke("RunMe", 0.5f);
