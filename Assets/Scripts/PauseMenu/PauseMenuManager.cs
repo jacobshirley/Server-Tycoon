@@ -133,7 +133,8 @@ public class PauseMenuManager : MonoBehaviour {
 
     public void LoadSettings()
     {
-        gameSettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/gameSettings.json"));
+
+        gameSettings = File.Exists(Application.persistentDataPath + "/gameSettings.json") ? JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/gameSettings.json")) : new GameSettings();
         musicVolumeSlider.value = gameSettings.musicVol;
         soundVolumeSlider.value = gameSettings.soundVol;
         vsyncDropDown.value = gameSettings.vsync;

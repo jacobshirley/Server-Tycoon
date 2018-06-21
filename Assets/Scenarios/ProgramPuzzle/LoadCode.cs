@@ -28,7 +28,7 @@ public class LoadCode : MonoBehaviour
 
     void Awake()
     {
-        codeSnippets = JsonUtility.FromJson<CodeSnippets>(File.ReadAllText("Assets/JSON/python-snippets.json"));
+        codeSnippets = JsonUtility.FromJson<CodeSnippets>(Resources.Load<TextAsset>("JSON/python-snippets").text);
     }
 
     // Use this for initialization

@@ -9,16 +9,11 @@ public class ClientGen {
     public const int MEDIUM = 1;
     public const int HARD = 2;
 
-    public static string ToTitleCase(string title)
-    {
-        return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(title);
-    }
-
     public Client GenClient(int difficulty) {
         Debug.Log(difficulty);
 
  		string reqType = Settings.CLIENT_TYPES[Random.Range(0, Settings.CLIENT_TYPES.Length)];
-        string reqName = ToTitleCase(WordsGenerator.GetInterestingWord(1)) + Settings.CLIENT_NAME_SUFFIXES[(int)(Random.value * Settings.CLIENT_NAME_SUFFIXES.Length)];
+        string reqName = WordsGenerator.ToTitleCase(WordsGenerator.GetInterestingWord(1)) + Settings.CLIENT_NAME_SUFFIXES[(int)(Random.value * Settings.CLIENT_NAME_SUFFIXES.Length)];
 
         int[] reqPorts = null;
         int reqStorage = 0;

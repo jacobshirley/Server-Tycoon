@@ -13,15 +13,25 @@ public class ServerPlacedScript : MonoBehaviour {
 
     public ServerData data;
     private new ServerLight light;
+    public ParticleSystem fire;
+    public ParticleSystem smoke;
+
+    public ProgressBar healthBar;
 
     // Use this for initialization
     void Start () {
+        RectTransform rect = healthBar.transform.parent.gameObject.GetComponent<RectTransform>();
+        rect.anchoredPosition = new Vector2(0, (float) 0.7);
+
         light = this.GetComponentInChildren<ServerLight>();
+        //fire = this.transform.Find("Fire").GetComponent<ParticleSystem>();
+        //smoke = this.transform.Find("Smoke").GetComponent<ParticleSystem>();
     }
 
     public void Init()
     {
         data.serverName = WordsGenerator.GetJoinedWord(1);
+        data.health = (float) 100.0;
     }
 
     public void UpdateClients()
@@ -74,6 +84,35 @@ public class ServerPlacedScript : MonoBehaviour {
         return true;   
     }
 
+    private void SetSmoke(Color color, float alpha)
+    {
+        smoke.gameObject.SetActive(true);
+
+        var main = smoke.main;
+        var startColor = main.startColor;
+
+        startColor.color = new Color(color.r, color.g, color.b, alpha);
+
+        main.startColor = startColor;
+        healthBar.gameObject.SetActive(true);
+    }
+
+    private void HideSmoke()
+    {
+        smoke.gameObject.SetActive(false);
+        healthBar.gameObject.SetActive(false);
+    }
+
+    private void ShowFire()
+    {
+        fire.gameObject.SetActive(true);
+    }
+
+    private void HideFire()
+    {
+        fire.gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update () {
         if (GameData.gamePaused)
@@ -81,6 +120,37 @@ public class ServerPlacedScript : MonoBehaviour {
 
         float cpuInc = (float)(this.data.def.cpu * CPU_OVERCLOCK_MAX * this.data.overclockedPercent);
         this.data.overclockedCPU = (float)System.Math.Round(this.data.def.cpu + cpuInc, 1);
+
+        healthBar.value = data.health;
+
+        if (data.health >= 50)
+        {
+            healthBar.progressColour = Settings.GREEN_WARNING;
+        } else if (data.health >= 15)
+        {
+            healthBar.progressColour = Settings.ORANGE_WARNING;
+        } else
+        {
+            healthBar.progressColour = Settings.RED_WARNING;
+        }
+
+        if (data.health <= 0)
+        {
+            GameData.servers.Remove(this);
+
+            EventManager evManager = GameObject.Find("Time").GetComponent<EventManager>();
+
+            evManager.Trigger("RemoveServer", this);
+
+            foreach (int client in this.data.clients)
+            {
+                Client cl = GameData.storage.clients.RemoveClient(client);
+                evManager.Trigger("RemoveClient", cl);
+            }
+
+            Destroy(this.gameObject);
+            return;
+        }
 
         if (Time.time > lastUpdate + UPDATE_RATE)
         {
@@ -90,14 +160,32 @@ public class ServerPlacedScript : MonoBehaviour {
 
             this.data.temperature = Settings.MIN_CPU_TEMP + (int)(System.Math.Exp(this.data.cpuUsage * Settings.CPU_TEMP_CURVE_MOD));
             this.data.temperature -= (int)((this.data.coolingUpgrades / (double)Settings.MAX_COOLING_UPGRADES) * Settings.MAX_TEMPERATURE_DECREASE);
-            this.data.temperature += (int)(this.data.overclockedPercent * 20);
-            if (this.data.temperature >= Settings.SERVER_WARNING_TEMP)
+            this.data.temperature += (int)(this.data.overclockedPercent * Settings.OVERCLOCK_MAX_TEMP_INCREASE);
+
+            if (this.data.temperature >= Settings.SERVER_HIGH_TEMP)
             {
-                light.SetColor(Color.red);
+                data.health -= (float)Settings.SERVER_HEALTH_DECREASE * 2;
+
+                SetSmoke(new Color(0, 0, 0), (float)0.1);
+                ShowFire();
+
+                light.SetColor(Settings.RED_WARNING);
                 light.flash = false;
+            } else if (this.data.temperature >= Settings.SERVER_MEDIUM_TEMP)
+            {
+                data.health -= (float)Settings.SERVER_HEALTH_DECREASE;
+
+                SetSmoke(new Color((float)0.5, (float)0.5, (float)0.5), (float)0.04);
+                HideFire();
+
+                light.SetColor(Settings.ORANGE_WARNING);
+                light.flash = true;
             } else
             {
-                light.SetColor(Color.green);
+                HideFire();
+                HideSmoke();
+
+                light.SetColor(Settings.GREEN_WARNING);
                 light.flash = true;
             }
 

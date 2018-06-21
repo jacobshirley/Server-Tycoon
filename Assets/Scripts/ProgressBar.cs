@@ -21,6 +21,7 @@ public class ProgressBar : MonoBehaviour {
         RectTransform trans = progressSize;
         trans.sizeDelta = new Vector2((float)(thisWidth * (value / 100.0)), trans.sizeDelta.y);
 
-        progressImage.color = progressColour;
+        if (progressColour != null)
+            progressImage.color = progressColour;
 	}
 }

@@ -9,7 +9,12 @@ public class EmailManager : MonoBehaviour {
     public Transform previewPanel;
 
     public EmailTemplate template;
-    EmailTemplates templates = JsonUtility.FromJson<EmailTemplates>(File.ReadAllText("./Assets/EmailTemplates/Emails.json"));
+    private EmailTemplates templates;
+
+    void Awake()
+    {
+       templates = JsonUtility.FromJson<EmailTemplates>(Resources.Load<TextAsset>("JSON/email-templates").text);
+    }
 
     // Use this for initialization
     void Start () {

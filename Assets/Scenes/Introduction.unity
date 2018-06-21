@@ -283,7 +283,7 @@ MonoBehaviour:
   message: 
   location: 0
   cont: {fileID: 0}
-  Location: ./Assets/Saves/test.json
+  Location: JSON/introduction
 --- !u!114 &528966216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 528966211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4583f0c9bc04e97a38c97766c49028, type: 3}
+  m_Script: {fileID: 11500000, guid: ab1d99b08076d6344b9c0aad980a7c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705030178

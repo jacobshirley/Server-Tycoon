@@ -10,7 +10,7 @@ public class Emails: MonoBehaviour {
     EmailTemplates templates;
 
     void Awake(){
-        templates = JsonUtility.FromJson<EmailTemplates>(File.ReadAllText("./Assets/EmailTemplates/Emails.json"));
+        templates = JsonUtility.FromJson<EmailTemplates>(Resources.Load<TextAsset>("JSON/email-templates").text);
         DontDestroyOnLoad(this.gameObject);
 	}
 

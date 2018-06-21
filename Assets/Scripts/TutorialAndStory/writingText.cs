@@ -22,13 +22,25 @@ public class writingText : MonoBehaviour {
 	void Start () {
 		location = 0;
 		text.text = "";
-		//message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
+		message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
 		write = false;
 		if(cont != null){cont.enabled = false;}
 		Invoke("RunMe", 2);
 	}
 
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            location = 0;
+            count = 0;
+            ArrayPoint++;
+            showCont();
+            return;
+        } else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Base");
+            return;
+        }
 		if(location < message.Length && write == true && count == 0){
 			text.text += message[location];
 			location++;
@@ -61,7 +73,7 @@ public class writingText : MonoBehaviour {
 		location = 0;
 		text.text = "";
 		Debug.Log(ArrayPoint);
-		//message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
+		message = this.gameObject.GetComponent<ReadTextFromFile>().LoadFile(ArrayPoint, Location).Text;
 		write = false;
 		if(cont != null){cont.enabled = false;}
 		Invoke("RunMe", 0.5f);

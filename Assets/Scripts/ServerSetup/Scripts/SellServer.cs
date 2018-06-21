@@ -5,20 +5,28 @@ using UnityEngine.UI;
 
 public class SellServer : MonoBehaviour {
 
-	
 	void Start () {
         this.transform.Find("Value").GetComponent<Text>().text = "Value: £" + ValueServer();
 
         this.transform.Find("Sell").GetComponent<Button>().onClick.AddListener(delegate
         {
             reputation rep = GameObject.Find("Rep").GetComponent<reputation>();
-            rep.removeRep((int)(rep.GetRep() * Settings.SELL_SERVER_REP_LOSS_PERCENT));
+            rep.removeRep((int)(GameData.CurrentServer.data.clients.Count * Settings.SELL_SERVER_CLIENT_REP_LOSS));
 
             //add money to economy
             float money = GameObject.Find("Money").GetComponent<economy>().GetMoney();
             GameObject.Find("Money").GetComponent<economy>().SetMoney(money + ValueServer());
 
             GameData.servers.Remove(GameData.CurrentServer);
+
+            EventManager evManager = GameObject.Find("Time").GetComponent<EventManager>();
+
+            foreach (int client in GameData.CurrentServer.data.clients)
+            {
+                Client cl = GameData.storage.clients.RemoveClient(client);
+                evManager.Trigger("RemoveClient", cl);
+            }
+
             Destroy(GameData.CurrentServer.gameObject);
         });
 	}

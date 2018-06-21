@@ -48,10 +48,10 @@ public class NewServerPlacement : MonoBehaviour {
     public void Place()
     {
         GameObject newServer = (GameObject)Instantiate(serverPrefab);
+        newServer.transform.position = hoverUI.transform.position;
         newServer.GetComponent<SpriteRenderer>().sprite = currentServerSprite;
         newServer.GetComponent<ServerPlacedScript>().Init();
         newServer.GetComponent<ServerPlacedScript>().data.def = CurrentServerDef;
-        newServer.transform.position = hoverUI.transform.position;
 
         GameObject.Find("Money").GetComponent<economy>().Pay(CurrentServerDef.cost);
 

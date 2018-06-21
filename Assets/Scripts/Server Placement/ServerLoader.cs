@@ -31,7 +31,7 @@ public class ServerLoader : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        serverList = JsonUtility.FromJson<ServerList>(File.ReadAllText("Assets/JSON/server-definitions.json"));
+        serverList = JsonUtility.FromJson<ServerList>(Resources.Load<TextAsset>("JSON/server-definitions").text);
         foreach (ServerDef def in serverList.servers)
         {
             GameObject server = (GameObject)Instantiate(serverListItem);

@@ -6,8 +6,8 @@ public static class Settings {
 
     //----Emails----
 
-    public static int MIN_EMAIL_FREQ = 20;
-    public static int MAX_EMAIL_FREQ = 30;
+    public const int MIN_EMAIL_FREQ = 20;
+    public const int MAX_EMAIL_FREQ = 30;
 
     //----UI----
 
@@ -22,8 +22,8 @@ public static class Settings {
 
     //----Clients----
 
-    public static int CLIENT_SATISFACTION_INCREASE = 20;
-    public static int CLIENT_SATISFACTION_DECREASE = 20;
+    public const int CLIENT_SATISFACTION_INCREASE = 20;
+    public const int CLIENT_SATISFACTION_DECREASE = 20;
 
     //Costs
     public const int CLIENT_PRICE_PER_HERT = 1 / 10;
@@ -41,27 +41,31 @@ public static class Settings {
 
     //----Reputation----
 
-    public static int REP_GAIN = 10;
-    public static int REP_LOSS = 10;
+    public const int REP_GAIN = 10;
+    public const int REP_LOSS = 10;
 
     //Server Config
 
     //-Selling
-    public static float SELL_SERVER_REP_LOSS_PERCENT = (float)0.2;
+    public const float SELL_SERVER_CLIENT_REP_LOSS = (float)0.2;
 
     //-Security
-    public static int STARTING_SECURITY_LEVEL = 50; //in percent
-    public static int MAX_SECURITY_UPGRADES = 3;
-    public static int MAX_SECURITY_INCREASE = 40; //in percent. Since we start at 50% security, the maximum security level can be 90% (if all ports are closed).
-    public static int SECURITY_DECREASE_PER_PORT = 5; //in percent. Each port open decreases the server security by 5%
-    public static int SECURITY_UPGRADE_COST = 200;
+    public const int STARTING_SECURITY_LEVEL = 50; //in percent
+    public const int MAX_SECURITY_UPGRADES = 3;
+    public const int MAX_SECURITY_INCREASE = 40; //in percent. Since we start at 50% security, the maximum security level can be 90% (if all ports are closed).
+    public const int SECURITY_DECREASE_PER_PORT = 5; //in percent. Each port open decreases the server security by 5%
+    public const int SECURITY_UPGRADE_COST = 200;
 
     //-Cooling
-    public static int SERVER_WARNING_TEMP = 70;
-    public static int MAX_COOLING_UPGRADES = 3;
-    public static int MAX_TEMPERATURE_DECREASE = 10; //in degrees. So if cooling upgrades are at maximum (3), 10 degrees celsius is taken off the server temperature
-    public static int COOLING_UPGRADE_COST = 100;
-    public static int MIN_CPU_TEMP = 42;
-    public static float CPU_TEMP_CURVE_MOD = (float)0.73;
-    
+    public const int SERVER_MEDIUM_TEMP = 62;
+    public const int SERVER_HIGH_TEMP = 70;
+    public const int MAX_COOLING_UPGRADES = 3;
+    public const int OVERCLOCK_MAX_TEMP_INCREASE = 30;
+    public const int MAX_TEMPERATURE_DECREASE = 10; //in degrees. So if cooling upgrades are at maximum (3), 10 degrees celsius is taken off the server temperature
+    public const int COOLING_UPGRADE_COST = 100;
+    public const int MIN_CPU_TEMP = 42;
+    public const float CPU_TEMP_CURVE_MOD = (float)0.73;
+
+    //-Health
+    public const float SERVER_HEALTH_DECREASE = (float)1;
 }

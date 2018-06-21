@@ -31,7 +31,8 @@ public class MainClientList : MonoBehaviour {
 
     void OnDisable()
     {
-        GameObject.Find("Time").GetComponent<EventManager>().Unlisten("NewClient", NewClient);
+        if (GameObject.Find("Time") != null)
+            GameObject.Find("Time").GetComponent<EventManager>().Unlisten("NewClient", NewClient);
     }
 
     void AddClient(Client client)

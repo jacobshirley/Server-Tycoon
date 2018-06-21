@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour {
@@ -10,6 +11,21 @@ public class StatsController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Display();
+
+        EventManager eventManager = GameObject.Find("Time").GetComponent<EventManager>();
+        eventManager.Listen("RemoveServer", RemoveServer);
+    }
+
+    private void RemoveServer(System.Object server)
+    {
+        ServerPlacedScript sps = (ServerPlacedScript)server;
+
+        SceneManager.UnloadSceneAsync(this.gameObject.scene);
+    }
+
+    public void OnDestroy()
+    {
+        GameObject.Find("Time").GetComponent<EventManager>().Unlisten("RemoveServer", RemoveServer);
     }
 
     private static int FormatStorage(int storage)
@@ -82,7 +98,7 @@ public class StatsController : MonoBehaviour {
         SetColourWarning("Security", server.data.securityLevel, d => d <= 50, d => d <= 35);
 
         SetText("Temperature", server.data.temperature + "\u2103");
-        SetColourWarning("Temperature", server.data.temperature, d => d >= 55, d => d >= 70);
+        SetColourWarning("Temperature", server.data.temperature, d => d >= Settings.SERVER_MEDIUM_TEMP, d => d >= Settings.SERVER_HIGH_TEMP);
 
         SetText("Power Usage", server.data.powerUsage + " W");
         SetColourWarning("Power Usage", server.data.powerUsage, d => d >= 300, d => d >= 500);

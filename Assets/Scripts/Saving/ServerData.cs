@@ -17,6 +17,8 @@ public class ServerData{
     public float overclockedPercent;
     public int costPerMonth;
 
+    public float health;
+
     public List<int> clients = new List<int>();
 
     //Upgrades

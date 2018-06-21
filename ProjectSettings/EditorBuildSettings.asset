@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game.unity
     guid: fe215c6509265b7448293f4bfc45888b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/game.unity
     guid: fe215c6509265b7448293f4bfc45888b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/game.unity
     guid: fe215c6509265b7448293f4bfc45888b
   - enabled: 1
@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameManager.unity
     guid: d7fd8094863864752a8a50ec7a528027
   - enabled: 1
-    path: Assets/ServerSetup/Server Setup.unity
+    path: Assets/Scripts/ServerSetup/Server Setup.unity
     guid: eac580ed9ece545b2ab785d8d9b3b059
   - enabled: 1
     path: Assets/Scenes/Game Over.unity

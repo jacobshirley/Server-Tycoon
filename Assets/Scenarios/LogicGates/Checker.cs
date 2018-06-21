@@ -35,7 +35,7 @@ public class Checker : MonoBehaviour {
 		}
 
 		public void load(){
-			answers = JsonUtility.FromJson<Answers>(File.ReadAllText("./Assets/Scenarios/LogicGates/Answers.json"));
+			answers = JsonUtility.FromJson<Answers>(Resources.Load<TextAsset>("JSON/logic-gates-answers").text);
 		}
 
 		public void check(){

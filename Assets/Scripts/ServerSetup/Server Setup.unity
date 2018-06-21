@@ -2515,8 +2515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -0.024993896}
-  m_SizeDelta: {x: -0.000061035, y: -0.049988}
+  m_AnchoredPosition: {x: 0.000030517578, y: -5.3849998}
+  m_SizeDelta: {x: -0.000061035, y: 1.0300007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802480463
 MonoBehaviour:
@@ -2777,7 +2777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186.6999, y: -74.1}
+  m_AnchoredPosition: {x: 186.6999, y: -67.5}
   m_SizeDelta: {x: 149.7, y: 38.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820924959
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121712340}
   m_HandleRect: {fileID: 1121712339}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2991,6 +2991,7 @@ GameObject:
   - component: {fileID: 844624924}
   - component: {fileID: 844624926}
   - component: {fileID: 844624925}
+  - component: {fileID: 844624927}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3013,8 +3014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 19}
-  m_SizeDelta: {x: 527.2, y: 128.2}
+  m_AnchoredPosition: {x: 3, y: -6.2}
+  m_SizeDelta: {x: 527.2, y: 195.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844624925
 MonoBehaviour:
@@ -3048,14 +3049,33 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Are you sure you want to sell your server? If you do this, your clients
-    won't be happy and you will lose 10% of your reputation!
+  m_Text: Are you sure you want to sell your server? You will lose 10 reputation points
+    per client hosted on this server.
 --- !u!222 &844624926
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 844624923}
+--- !u!114 &844624927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844624923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9945e91b8ed9c234ba737a266238bd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: "Selling your server might seem like a good idea when you don't have much
+    money, but losing a lot of reputation in the process can also be very harmful
+    for your future. \n\nMake sure you only do this when you really have to!"
+  Immediate: 0
+  Seen: 0
+  top: 0
+  left: 0
+  order: 0
 --- !u!1 &846893523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7603,7 +7623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152.8, y: -76.3}
+  m_AnchoredPosition: {x: -152.8, y: -67.5}
   m_SizeDelta: {x: 223.3, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900167137
@@ -7679,7 +7699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: -74.1}
+  m_AnchoredPosition: {x: 37, y: -67.5}
   m_SizeDelta: {x: 149.7, y: 38.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905255388

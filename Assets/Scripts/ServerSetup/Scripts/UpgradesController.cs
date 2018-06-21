@@ -61,7 +61,7 @@ public class UpgradesController : MonoBehaviour {
         securityLvlText.text = server.data.securityUpgrades + " / " + Settings.MAX_SECURITY_UPGRADES;
 
         if (server.data.securityUpgrades < Settings.MAX_SECURITY_UPGRADES) {
-            securityUpgradeBtn.GetComponentInChildren<Text>().text = "$" + Settings.SECURITY_UPGRADE_COST + " Security Upgrade";
+            securityUpgradeBtn.GetComponentInChildren<Text>().text = "£" + Settings.SECURITY_UPGRADE_COST + " Security Upgrade";
         } else
         {
             securityUpgradeBtn.GetComponentInChildren<Text>().text = "Maximum Upgrades";
@@ -76,7 +76,7 @@ public class UpgradesController : MonoBehaviour {
 
         if (server.data.coolingUpgrades < Settings.MAX_COOLING_UPGRADES)
         {
-            coolingUpgradeBtn.GetComponentInChildren<Text>().text = "$" + Settings.COOLING_UPGRADE_COST + " Cooling Upgrade";
+            coolingUpgradeBtn.GetComponentInChildren<Text>().text = "£" + Settings.COOLING_UPGRADE_COST + " Cooling Upgrade";
         }
         else
         {

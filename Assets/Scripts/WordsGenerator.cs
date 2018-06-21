@@ -1,11 +1,13 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class WordsGenerator
 {
-    private static string[] nouns = File.ReadAllLines("Assets/JSON/nouns.txt");
-    private static string[] adjectives = File.ReadAllLines("Assets/JSON/adjectives.txt");
+    private static string[] nouns = Regex.Split(Resources.Load<TextAsset>("JSON/nouns").text, "\n");
+    private static string[] adjectives = Regex.Split(Resources.Load<TextAsset>("JSON/adjectives").text, "\n");
 
     public static string[] GetRandomNouns(int number)
     {
@@ -39,8 +41,23 @@ public static class WordsGenerator
         return ToTitleCase(GetInterestingWord(adjectiveAmount)).Replace(" ", "");
     }
 
-    public static string ToTitleCase(string title)
+    public static string ToTitleCase(string s)
     {
-        return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(title);
+        if (s == null) return s;
+
+        string[] words = s.Split(' ');
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (words[i].Length == 0) continue;
+
+            char firstChar = char.ToUpper(words[i][0]);
+            string rest = "";
+            if (words[i].Length > 1)
+            {
+                rest = words[i].Substring(1).ToLower();
+            }
+            words[i] = firstChar + rest;
+        }
+        return string.Join(" ", words);
     }
-}
+    }

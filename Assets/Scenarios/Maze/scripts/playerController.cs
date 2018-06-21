@@ -28,7 +28,6 @@ public class playerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-      Debug.Log("Entered");
         if (collision.gameObject.CompareTag("workstation"))
         {
             promptTxt.text = "Press 'e' to log on";
@@ -57,7 +56,6 @@ public class playerController : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D collision)
     {
-      Debug.Log("Exit");
         if (collision.gameObject.CompareTag("server"))
         {
             serverTriggers--;
